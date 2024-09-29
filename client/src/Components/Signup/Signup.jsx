@@ -20,7 +20,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8080/api/users";
+			const url = "https://my-to-do-app-iws48mtqb-abhis-projects-40f0dcc7.vercel.app/";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 			console.log(res.message);
