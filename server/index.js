@@ -25,10 +25,15 @@ app.use(cors(
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 
+app.get('/', (req, res)=>{
+    res.json("Hello Server!")
+})
+
 app.get('/get', (req, res)=>{
-    TodoModel.find()
-    .then(result => res.json(result))
-    .catch(error=> res.json(error))
+    // TodoModel.find()
+    // .then(result => res.json(result))
+    // .catch(error=> res.json(error))
+    res.json("Hello Server")
 })
 
 // update task status API
