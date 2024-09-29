@@ -29,11 +29,11 @@ app.use("/api/auth", authRoutes);
 //     res.json("Hello Server!")
 // })
 
-app.get('/', (req, res)=>{
+app.get('/get', (req, res)=>{
     TodoModel.find()
     .then(result => res.json(result))
     .catch(error=> res.json(error))
-    res.json("Hello Server")
+    // res.json("Hello Server")
 })
 
 // update task status API
